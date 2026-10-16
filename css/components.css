@@ -1,0 +1,239 @@
+/* ============================================================
+   COMPONENTS — reusable UI atoms: tiles, chips, buttons, badges,
+   command palette, terminal lines.
+   ============================================================ */
+
+/* ---- tile (bento cell) ---- */
+.tile {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  transition: border-color var(--dur-fast), box-shadow var(--dur-mid);
+}
+.tile:hover {
+  border-color: var(--c-border-strong);
+  box-shadow: var(--shadow-card);
+}
+.tile-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ---- chips / tags ---- */
+.chip {
+  display: inline-block;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  background: var(--c-cool-bg);
+  border: 1px solid rgba(61, 232, 255, 0.25);
+  color: var(--c-accent-cool);
+}
+.tag {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--c-accent-hot);
+  border: 1px solid rgba(255, 61, 203, 0.35);
+  padding: 2px var(--sp-2);
+  border-radius: var(--r-full);
+}
+.tag--live { color: var(--c-accent); border-color: rgba(198, 255, 61, 0.35); }
+
+/* ---- buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-5);
+  border-radius: var(--r-full);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  border: 1px solid var(--c-border);
+  background: var(--c-surface-2);
+  transition: transform var(--dur-fast), box-shadow var(--dur-fast), border-color var(--dur-fast);
+  min-height: 44px;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--c-accent);
+  box-shadow: var(--shadow-glow);
+}
+.btn--primary {
+  background: var(--c-accent);
+  color: var(--c-bg);
+  border-color: transparent;
+}
+.btn--primary:hover {
+  box-shadow: 0 8px 24px rgba(198, 255, 61, 0.3);
+}
+
+/* ---- status dot ---- */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ---- terminal line ---- */
+.term-line {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--c-text-muted);
+  padding: var(--sp-2) 0;
+}
+.term-line::before {
+  content: "$ ";
+  color: var(--c-accent);
+}
+.term-line .ok { color: var(--c-accent); }
+
+/* ---- project card ---- */
+.project-card {
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  transition: transform var(--dur-fast), border-color var(--dur-fast), box-shadow var(--dur-mid);
+}
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(61, 232, 255, 0.35);
+  box-shadow: 0 16px 40px rgba(61, 232, 255, 0.08);
+}
+.project-card h3 {
+  font-size: var(--fs-md);
+  color: var(--c-accent);
+}
+.project-card p { color: var(--c-text-muted); font-size: var(--fs-sm); }
+.project-card .tech-row { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: auto; }
+.project-card.dim { opacity: 0.55; }
+.project-card a.card-link {
+  color: var(--c-accent-cool);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.project-card a.card-link:hover { text-decoration: underline; }
+
+/* ---- ship log entry ---- */
+.shiplog-entry {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.shiplog-entry:last-child { border-bottom: none; }
+.shiplog-date {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-text-dim);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+.shiplog-body h4 { font-size: var(--fs-sm); font-weight: 700; }
+.shiplog-body p { font-size: var(--fs-sm); color: var(--c-text-muted); }
+
+/* ---- link button ---- */
+.link-btn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--r-md);
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  transition: transform var(--dur-fast), border-color var(--dur-fast);
+  min-height: 44px;
+}
+.link-btn:not(.is-placeholder):hover {
+  transform: translateY(-2px);
+  border-color: var(--c-accent-hot);
+}
+.link-btn span { font-weight: 700; font-size: var(--fs-sm); }
+.link-btn small { color: var(--c-text-muted); font-size: var(--fs-xs); word-break: break-all; }
+.is-placeholder { opacity: 0.6; cursor: default; border-style: dashed; }
+
+/* ---- command palette ---- */
+.palette-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 15vh;
+}
+.palette-overlay.open { display: flex; }
+.palette {
+  width: min(560px, 92vw);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+}
+.palette input {
+  width: 100%;
+  padding: var(--sp-4) var(--sp-5);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--c-border);
+  color: var(--c-text);
+  font-family: var(--font-mono);
+  font-size: var(--fs-base);
+  outline: none;
+}
+.palette input::placeholder { color: var(--c-text-dim); }
+.palette-results {
+  max-height: 320px;
+  overflow-y: auto;
+  padding: var(--sp-2);
+}
+.palette-item {
+  display: block;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+  color: var(--c-text-muted);
+  cursor: pointer;
+}
+.palette-item:hover, .palette-item.active {
+  background: var(--c-accent-bg);
+  color: var(--c-accent);
+}
+
+/* ---- pill ---- */
+.pill {
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--r-full);
+  font-size: var(--fs-sm);
+  border: 1px solid rgba(198, 255, 61, 0.3);
+  background: var(--c-accent-bg);
+  color: var(--c-accent);
+}

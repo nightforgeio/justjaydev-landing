@@ -1,0 +1,105 @@
+/* ============================================================
+   BASE — reset, typography, global utilities.
+   Consumes tokens.css only. No magic numbers here.
+   ============================================================ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--c-text);
+  background: var(--c-bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hindi mode swaps the body face to Noto Sans Devanagari */
+html[lang="hi"] body { font-family: var(--font-hi); }
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font: inherit; color: inherit; cursor: pointer; }
+ul, ol { list-style: none; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.mono { font-family: var(--font-mono); }
+
+/* ---- focus ---- */
+:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+/* ---- selection ---- */
+::selection { background: var(--c-accent); color: var(--c-bg); }
+
+/* ---- skip link ---- */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: var(--sp-2);
+  z-index: 100;
+  background: var(--c-accent);
+  color: var(--c-bg);
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--r-sm);
+  font-weight: 700;
+}
+.skip:focus { left: var(--sp-3); }
+
+/* ---- section heading ---- */
+.section-title {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  margin-bottom: var(--sp-5);
+  display: inline-block;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 56%;
+  margin-top: var(--sp-2);
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--c-accent), var(--c-accent-cool));
+}
+
+/* ---- scroll reveal ---- */
+.js .reveal { opacity: 0; transform: translateY(28px); transition: opacity var(--dur-slow) ease, transform var(--dur-slow) var(--ease-out); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* ---- reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ---- high contrast ---- */
+@media (prefers-contrast: more) {
+  :root {
+    --c-border: rgba(255, 255, 255, 0.3);
+    --c-text-muted: #b4bacb;
+  }
+}

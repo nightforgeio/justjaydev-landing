@@ -19,6 +19,7 @@ var STATIC = [
   './fonts/jetbrains-mono-var.woff2',
   './fonts/noto-sans-devanagari.woff2',
   './assets/jay.webp',
+  './assets/share.png',
   './assets/icon-32.png',
   './assets/icon-512.png',
   './manifest.json'

@@ -4,190 +4,116 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>JustJayDev · Jay</title>
-  <meta name="description" content="Jay (JustJayDev): builder, developer, gamer. Projects and links.">
-  <meta name="theme-color" content="#08090e">
+  <meta name="description" content="Jay (JustJayDev): builder, developer, gamer. Ships what others call impossible.">
+  <meta name="theme-color" content="#000000">
   <meta name="google-site-verification" content="yxH_HOX5ByYovZ9krFg23hR9YTv7EMusiC01OondrV4">
   <link rel="canonical" href="https://nightforgeio.github.io/justjaydev-landing/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="hi_IN">
   <meta property="og:title" content="JustJayDev · Jay">
-  <meta property="og:description" content="Builder, developer, gamer. Projects, team and links.">
+  <meta property="og:description" content="Ships what others call impossible.">
   <meta property="og:url" content="https://nightforgeio.github.io/justjaydev-landing/">
   <meta property="og:image" content="https://nightforgeio.github.io/justjaydev-landing/assets/share.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="JustJayDev — builder, developer, gamer">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="JustJayDev · Jay">
-  <meta name="twitter:description" content="Builder, developer, gamer. Projects, team and links.">
+  <meta name="twitter:description" content="Ships what others call impossible.">
   <meta name="twitter:image" content="https://nightforgeio.github.io/justjaydev-landing/assets/share.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <meta name="robots" content="index, follow">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jay","alternateName":"JustJayDev","url":"https://nightforgeio.github.io/justjaydev-landing/","image":"https://nightforgeio.github.io/justjaydev-landing/assets/share.png","jobTitle":"Builder, Developer, Gamer"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jay","alternateName":"JustJayDev","url":"https://nightforgeio.github.io/justjaydev-landing/","jobTitle":"Builder, Developer, Gamer"}</script>
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-var.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="fonts/jetbrains-mono-var.woff2" crossorigin>
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    @font-face {
-      font-family: "Space Grotesk";
-      src: url("fonts/space-grotesk-var.woff2") format("woff2");
-      font-weight: 300 700;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "JetBrains Mono";
-      src: url("fonts/jetbrains-mono-var.woff2") format("woff2");
-      font-weight: 100 800;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "Noto Sans Devanagari";
-      src: url("fonts/noto-sans-devanagari.woff2") format("woff2");
-      font-weight: 100 900;
-      font-display: swap;
-    }
+    @font-face{font-family:"Space Grotesk";src:url("fonts/space-grotesk-var.woff2") format("woff2");font-weight:300 700;font-display:swap}
+    @font-face{font-family:"JetBrains Mono";src:url("fonts/jetbrains-mono-var.woff2") format("woff2");font-weight:100 800;font-display:swap}
+    @font-face{font-family:"Noto Sans Devanagari";src:url("fonts/noto-sans-devanagari.woff2") format("woff2");font-weight:100 900;font-display:swap}
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <a class="brand" href="#main">~/justjaydev</a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#shiplog" data-i18n="nav.shiplog">Ship Log</a>
-      <a href="#skills" data-i18n="nav.skills">Skills</a>
-      <a href="#links" data-i18n="nav.links">Links</a>
-    </nav>
-    <div style="display:flex;gap:var(--sp-2);align-items:center">
-      <button class="lang-btn" id="lang-toggle" type="button" aria-label="Switch language">हिन्दी</button>
-      <button class="lang-btn" id="palette-trigger" type="button" aria-label="Command palette" title="Ctrl+K">⌘K</button>
+  <!-- S1: NAME -->
+  <section class="screen" id="s-name">
+    <h1 class="mega" data-i18n="name">JAY</h1>
+    <p class="sub mono">@JustJayDev</p>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- S2: QUOTE 1 -->
+  <section class="screen" id="s-q1">
+    <p class="statement" data-i18n="q1">They call it<br>impossible.</p>
+  </section>
+
+  <!-- S3: QUOTE 2 -->
+  <section class="screen" id="s-q2">
+    <p class="statement accent" data-i18n="q2">I call it<br>inevitable.</p>
+  </section>
+
+  <!-- S4: ROLES -->
+  <section class="screen" id="s-roles">
+    <div class="roles-list">
+      <p class="role" data-i18n="r1">Builder</p>
+      <p class="role" data-i18n="r2">Developer</p>
+      <p class="role" data-i18n="r3">Gamer</p>
     </div>
-  </header>
+    <p class="role-note" data-i18n="rnote">Self-taught. Learns in public. Builds from scratch.</p>
+  </section>
 
-  <main id="main" class="shell">
-    <div class="bento">
-
-      <!-- HERO -->
-      <section class="tile tile-hero reveal" id="hero">
-        <img class="hero-avatar" src="assets/jay.webp" alt="Jay (JustJayDev)" width="96" height="96" fetchpriority="high">
-        <p class="hero-eyebrow" data-i18n="hero.eyebrow">Builder · Developer · Gamer</p>
-        <h1 class="hero-name scramble" data-text="Jay">Jay</h1>
-        <p class="hero-handle">@JustJayDev</p>
-        <p class="hero-quote" data-i18n="hero.quote">They call it impossible. I call it inevitable. Because an emperor's will cannot be denied.</p>
-        <div class="hero-cta">
-          <a class="btn btn--primary" href="#projects" data-i18n="hero.cta1">See my work</a>
-          <a class="btn" href="#links" data-i18n="hero.cta2">Links</a>
-          <button class="btn" id="share-btn" type="button" hidden data-i18n="hero.share">Share</button>
-        </div>
-      </section>
-
-      <!-- STATUS -->
-      <section class="tile tile-status reveal" id="status-tile">
-        <span class="tile-label" data-i18n="status.label">Currently building</span>
-        <div class="status-row">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span class="status-text" id="status-text">Loading…</span>
-        </div>
-        <span class="status-updated" id="status-date"></span>
-      </section>
-
-      <!-- BUILT ON -->
-      <section class="tile tile-buildon reveal" id="buildon-tile">
-        <span class="tile-label" data-i18n="buildon.label">Built on</span>
-        <p class="term-line">build --target=production <span class="ok">✓</span></p>
-        <p class="term-line">deploy --platform=github-pages <span class="ok">✓</span></p>
-        <p class="term-line">device --os=android <span class="ok">📱</span></p>
-      </section>
-
-      <!-- GITHUB STATS -->
-      <section class="tile tile-github reveal" id="github-tile">
-        <span class="tile-label" data-i18n="github.label">GitHub</span>
-        <div class="gh-stats" id="gh-stats">
-          <div class="gh-stat"><strong id="gh-repos">—</strong><span data-i18n="github.repos">repos</span></div>
-          <div class="gh-stat"><strong id="gh-stars">—</strong><span data-i18n="github.stars">stars</span></div>
-          <div class="gh-stat"><strong id="gh-push">—</strong><span data-i18n="github.lastPush">last push</span></div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section class="tile tile-projects reveal" id="projects">
-        <h2 class="section-title" data-i18n="projects.title">Projects</h2>
-        <div class="projects-grid" id="projects-grid">
-          <!-- rendered by render.js -->
-        </div>
-      </section>
-
-      <!-- SHIP LOG -->
-      <section class="tile tile-shiplog reveal" id="shiplog">
-        <h2 class="section-title" data-i18n="shiplog.title">Ship Log</h2>
-        <div id="shiplog-list">
-          <!-- rendered by render.js -->
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section class="tile tile-skills reveal" id="skills">
-        <h2 class="section-title" data-i18n="skills.title">Skills</h2>
-        <div class="skills-list" id="skills-list">
-          <!-- rendered by render.js -->
-        </div>
-      </section>
-
-      <!-- LINKS -->
-      <section class="tile tile-links reveal" id="links">
-        <h2 class="section-title" data-i18n="links.title">Links</h2>
-        <div class="links-grid" id="links-grid">
-          <!-- rendered by render.js -->
-        </div>
-      </section>
-
+  <!-- S5: PROJECTS -->
+  <section class="screen screen--tall" id="s-projects">
+    <h2 class="section-head" data-i18n="ptitle">Shipped</h2>
+    <div class="proj-list" id="proj-list">
+      <a class="proj" href="https://github.com/nightforgeio" target="_blank" rel="noopener">
+        <span class="proj-name">NightForge</span>
+        <span class="proj-desc" data-i18n="p1">Builder brand. Projects, plugins, tools.</span>
+      </a>
+      <a class="proj" href="https://nightforgeio.github.io/shop-template/" target="_blank" rel="noopener">
+        <span class="proj-name">shop-template</span>
+        <span class="proj-desc" data-i18n="p2">Bilingual food-shop PWA. 89 tests. Admin panel.</span>
+      </a>
+      <span class="proj">
+        <span class="proj-name">justjaydev-landing</span>
+        <span class="proj-desc" data-i18n="p3">This page. Built on Android.</span>
+      </span>
+      <span class="proj proj--soon">
+        <span class="proj-name">Team Quantum Gaming</span>
+        <span class="proj-desc" data-i18n="p4">IGL · Jersey 07 · Site soon.</span>
+      </span>
     </div>
-  </main>
+  </section>
 
-  <a class="to-top" href="#main" aria-label="Back to top">↑</a>
-
-  <footer class="footer">
-    <div class="footer-inner shell">
-      <p>© <span id="year">2026</span> Jay · @JustJayDev</p>
-      <p class="build-info" data-i18n="footer.built">Built on Android with Operit · Hosted on GitHub Pages</p>
+  <!-- S6: TERMINAL -->
+  <section class="screen screen--tall" id="s-terminal">
+    <div class="terminal">
+      <div class="term-bar"><span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span><span class="term-title">nightforge@android: ~</span></div>
+      <div class="term-body" id="term-body">
+        <p class="term-line term-out">Welcome. Type <span class="accent-text">help</span> for commands.</p>
+      </div>
+      <div class="term-input-row">
+        <span class="term-prompt">$</span>
+        <input type="text" id="term-input" class="term-input" autocomplete="off" spellcheck="false" aria-label="Terminal input">
+      </div>
     </div>
+  </section>
+
+  <!-- S7: CONTACT -->
+  <section class="screen" id="s-contact">
+    <p class="contact-label" data-i18n="clabel">Say hello</p>
+    <a class="contact-email mono" href="mailto:jaykumar.c2010@gmail.com">jaykumar.c2010@gmail.com</a>
+    <button class="copy-hint" id="copy-email" type="button" data-i18n="copy">tap to copy</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p class="mono" data-i18n="footer">Built on Android · Hosted on GitHub Pages · © 2026</p>
   </footer>
 
-  <!-- MOBILE BOTTOM NAV -->
-  <nav class="bottom-nav" aria-label="Mobile navigation">
-    <a href="#hero" aria-label="Home">⌂</a>
-    <a href="#projects" aria-label="Projects">▦</a>
-    <a href="#shiplog" aria-label="Ship Log">☰</a>
-    <a href="#links" aria-label="Links">⚡</a>
-  </nav>
-
-  <!-- COMMAND PALETTE -->
-  <div class="palette-overlay" id="palette-overlay" role="dialog" aria-modal="true" aria-label="Command palette">
-    <div class="palette">
-      <input type="text" id="palette-input" placeholder="Type a command…" autocomplete="off">
-      <div class="palette-results" id="palette-results"></div>
-    </div>
-  </div>
-
-  <noscript>
-    <style>.js .reveal{opacity:1;transform:none}.bento{display:block}.tile{margin-bottom:16px}</style>
-    <p style="text-align:center;padding:20px;color:#c6ff3d;">This site works best with JavaScript enabled.</p>
-  </noscript>
-
-  <script src="js/i18n.js" defer></script>
-  <script src="js/render.js" defer></script>
-  <script src="js/motion.js" defer></script>
-  <script src="js/palette.js" defer></script>
-  <script src="js/extras.js" defer></script>
+  <noscript><style>.js .fade-in{opacity:1;transform:none}</style></noscript>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

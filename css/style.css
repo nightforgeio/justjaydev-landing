@@ -1,13 +1,13 @@
 /* ============================================================
-   JustJayDev v11 — Cinematic.
-   One file. No cards. No grids. Type does everything.
+   JustJayDev v11.1 — Cinematic.
+   Pure type. Pure black. One accent. Nothing else.
    ============================================================ */
 
 :root {
   --bg: #000;
   --fg: #f4f4f0;
   --muted: #6b6b66;
-  --dim: #3a3a36;
+  --dim: #2a2a26;
   --accent: #c6ff3d;
   --font-d: "Space Grotesk", system-ui, sans-serif;
   --font-m: "JetBrains Mono", ui-monospace, monospace;
@@ -21,6 +21,7 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   scrollbar-gutter: stable;
+  color-scheme: dark;
 }
 
 body {
@@ -42,10 +43,54 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 ::selection { background: var(--accent); color: var(--bg); }
 
+/* lime scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--dim); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
   border-radius: 2px;
+}
+
+/* ---- skip link ---- */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 12px;
+  z-index: 100;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.skip:focus { left: 12px; }
+
+/* ---- film grain ---- */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ---- scroll progress ---- */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  z-index: 998;
+  pointer-events: none;
 }
 
 /* ---- full-screen sections ---- */
@@ -60,7 +105,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding: 24px clamp(20px, 6vw, 80px);
   position: relative;
 }
-.screen--tall { min-height: 100vh; padding-block: 12vh; justify-content: flex-start; padding-top: 18vh; }
+.screen--tall { min-height: 100vh; padding-block: 12vh; justify-content: flex-start; padding-top: 16vh; }
 
 /* ---- S1: name ---- */
 .mega {
@@ -69,6 +114,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   letter-spacing: -0.04em;
   line-height: 0.9;
   user-select: none;
+  opacity: 0;
+  filter: blur(12px);
+  transform: scale(0.94);
+}
+.mega.arrived {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+  transition: opacity 0.7s var(--ease), filter 0.7s var(--ease), transform 0.7s var(--ease);
 }
 .sub {
   margin-top: clamp(12px, 3vh, 28px);
@@ -77,7 +131,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   letter-spacing: 0.12em;
 }
 
-/* scroll cue: thin breathing line */
+/* scroll cue */
 .scroll-cue {
   position: absolute;
   bottom: clamp(20px, 5vh, 48px);
@@ -155,6 +209,16 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   position: relative;
 }
 .proj:first-child { border-top: 1px solid var(--dim); }
+.proj-top {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.proj-num {
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: var(--dim);
+  min-width: 2ch;
+}
 .proj-name {
   font-size: clamp(26px, 4.5vw, 46px);
   font-weight: 600;
@@ -165,6 +229,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: clamp(13px, 1.7vw, 16px);
   color: var(--muted);
   font-family: var(--font-m);
+  padding-left: calc(2ch + 16px);
 }
 a.proj:hover .proj-name,
 a.proj:focus-visible .proj-name {
@@ -172,7 +237,7 @@ a.proj:focus-visible .proj-name {
   padding-left: 20px;
 }
 a.proj::after {
-  content: "→";
+  content: "\2192";
   position: absolute;
   right: 0;
   top: 50%;
@@ -187,7 +252,6 @@ a.proj:hover::after, a.proj:focus-visible::after {
   transform: translateY(-50%) translateX(0);
 }
 .proj--soon { opacity: 0.45; }
-.proj--soon .proj-desc::after { content: " · soon"; color: var(--accent); }
 
 /* ---- S6: terminal ---- */
 .terminal {
@@ -286,6 +350,11 @@ a.proj:hover::after, a.proj:focus-visible::after {
   font-size: 12px;
   letter-spacing: 0.1em;
 }
+.build-line {
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: 0.6;
+}
 
 /* ---- language toggle ---- */
 .lang-toggle {
@@ -318,6 +387,7 @@ a.proj:hover::after, a.proj:focus-visible::after {
 /* ---- mobile ---- */
 @media (max-width: 600px) {
   .proj::after { display: none; }
+  .proj-desc { padding-left: 0; }
 }
 
 /* ---- reduced motion ---- */
@@ -328,4 +398,24 @@ a.proj:hover::after, a.proj:focus-visible::after {
     scroll-behavior: auto !important;
   }
   .js .fade-in { opacity: 1; transform: none; }
+  .mega { opacity: 1; filter: none; transform: none; }
+  .grain { display: none; }
+}
+
+/* ---- avatar (S1) ---- */
+.avatar-wrap {
+  margin-bottom: clamp(16px, 3vh, 28px);
+}
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border: 2px solid var(--dim);
+  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.avatar:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 32px rgba(198, 255, 61, 0.2);
 }

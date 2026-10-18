@@ -1,5 +1,5 @@
-// sw.js — v11 cinematic. Cache jj-v15.
-var CACHE = 'jj-v15';
+// sw.js — v11 cinematic. Cache jj-v16.
+var CACHE = 'jj-v16';
 var STATIC = [
   './',
   './index.html',

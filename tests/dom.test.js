@@ -35,7 +35,7 @@ assert(doc.querySelector('.avatar'), 'avatar image present');
 
 // Meta / SEO
 assert(doc.querySelector('meta[name="description"]'), 'meta description');
-assert(html.includes('assets/share.png'), 'og:image points to share.png');
+assert(html.includes('assets/share.jpg'), 'og:image points to share.jpg');
 assert(doc.querySelector('meta[name="theme-color"]'), 'theme-color');
 assert(doc.querySelector('link[rel="manifest"]'), 'manifest');
 assert(doc.querySelector('script[type="application/ld+json"]'), 'structured data');
@@ -76,7 +76,7 @@ assert(css.includes('feTurbulence'), 'grain uses SVG turbulence');
 
 // SW
 const sw = fs.readFileSync(path.join(__dirname, '..', 'sw.js'), 'utf8');
-assert(sw.includes('jj-v16'), 'SW cache bumped to jj-v16');
+assert(sw.includes('jj-v17'), 'SW cache bumped to jj-v17');
 
 console.log('\n' + pass + ' passed / ' + fail + ' failed');
 process.exit(fail > 0 ? 1 : 0);

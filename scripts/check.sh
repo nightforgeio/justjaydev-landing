@@ -42,7 +42,7 @@ if grep -q 'background-clip: text' css/style.css; then bad 'gradient text clip';
 
 # 7. Assets
 echo '── Assets ──'
-if [ -s assets/share.png ]; then ok "share.png ($(wc -c < assets/share.png) bytes)"; else bad "share.png missing"; fi
+if [ -s assets/share.jpg ]; then ok "share.png ($(wc -c < assets/share.jpg) bytes)"; else bad "share.png missing"; fi
 if [ -s assets/jay.webp ]; then ok "jay.webp"; else bad "jay.webp missing"; fi
 
 echo ''

@@ -1,5 +1,5 @@
-// sw.js — v11 cinematic. Cache jj-v16.
-var CACHE = 'jj-v16';
+// sw.js — v11 cinematic. Cache jj-v17.
+var CACHE = 'jj-v17';
 var STATIC = [
   './',
   './index.html',
@@ -9,6 +9,7 @@ var STATIC = [
   './fonts/space-grotesk-var.woff2',
   './fonts/jetbrains-mono-var.woff2',
   './fonts/noto-sans-devanagari.woff2',
+  './assets/jay.webp',
   './assets/icon-32.png',
   './assets/icon-512.png',
   './manifest.json'

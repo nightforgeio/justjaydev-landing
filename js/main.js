@@ -127,7 +127,8 @@
   var rv = document.querySelectorAll('.rv');
   if (!reduce && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    rv.forEach(function(el){ io.observe(el); });
+      var rvi = 0;
+      rv.forEach(function(el){ el.style.transitionDelay = Math.min(rvi++ * 60, 360) + 'ms'; io.observe(el); });
     if (hh) setTimeout(function(){ hh.classList.add('in'); }, 260);
   } else { rv.forEach(function(el){ el.classList.add('in'); }); if (hh) hh.classList.add('in'); }
 

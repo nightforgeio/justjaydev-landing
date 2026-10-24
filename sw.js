@@ -1,7 +1,7 @@
-// sw.js — v12 services site. Cache jj-v12-5b03e949 (content-derived; do not hand-edit).
+// sw.js — v12 services site. Cache jj-v12-3d69a28b (content-derived; do not hand-edit).
 // Strategy: network-first for navigations (content stays fresh),
 // cache-first for static assets (instant repeat loads), offline fallback.
-var CACHE = 'jj-v12-5b03e949';
+var CACHE = 'jj-v12-3d69a28b';
 var STATIC = [
   './',
   './index.html',

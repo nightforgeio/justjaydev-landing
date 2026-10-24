@@ -14,9 +14,9 @@
   --c-text: #edf0f7;
   --c-text-muted: #8b92a8;
   --c-text-dim: #5c6378;
-  --c-accent: #c6ff3d;          /* electric lime — the forge */
-  --c-accent-cool: #3de8ff;    /* cyan — secondary */
-  --c-accent-hot: #ff3dcb;     /* magenta — rare, sparingly */
+  --c-accent: #c6ff3d; /* electric lime — the forge */
+  --c-accent-cool: #3de8ff; /* cyan — secondary */
+  --c-accent-hot: #ff3dcb; /* magenta — rare, sparingly */
   --c-accent-bg: rgba(198, 255, 61, 0.07);
   --c-cool-bg: rgba(61, 232, 255, 0.06);
 
@@ -27,13 +27,13 @@
   --font-hi: "Noto Sans Devanagari", var(--font-body);
 
   /* type scale — 1.25 (major third) */
-  --fs-xs: 0.75rem;    /* 12px — labels, timestamps */
-  --fs-sm: 0.875rem;   /* 14px — captions, chips */
-  --fs-base: 1rem;     /* 16px — body */
-  --fs-md: 1.25rem;    /* 20px — card titles */
-  --fs-lg: 1.563rem;   /* 25px — section h2 */
-  --fs-xl: 2.5rem;     /* 40px — hero name */
-  --fs-2xl: 3.5rem;    /* 56px — hero on desktop */
+  --fs-xs: 0.75rem; /* 12px — labels, timestamps */
+  --fs-sm: 0.875rem; /* 14px — captions, chips */
+  --fs-base: 1rem; /* 16px — body */
+  --fs-md: 1.25rem; /* 20px — card titles */
+  --fs-lg: 1.563rem; /* 25px — section h2 */
+  --fs-xl: 2.5rem; /* 40px — hero name */
+  --fs-2xl: 3.5rem; /* 56px — hero on desktop */
 
   /* ---- spacing (4px base) ---- */
   --sp-1: 4px;

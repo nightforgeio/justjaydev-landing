@@ -100,7 +100,11 @@
     var tt = document.getElementById('toTop'); if (tt) tt.classList.toggle('show', y > innerHeight * 0.8);
     var cur = '';
     secs.forEach(function(s){ if (s && s.getBoundingClientRect().top < innerHeight * 0.4) cur = s.id; });
-    navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
+    navLinks.forEach(function(a){
+      var on = a.getAttribute('href') === '#' + cur;
+      a.classList.toggle('active', on);
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
     ticking = false;
   }
   addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });

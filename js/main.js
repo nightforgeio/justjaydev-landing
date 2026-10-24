@@ -108,7 +108,7 @@
 
   // ===== mobile menu =====
   var burger = document.getElementById('burger'), mm = document.getElementById('mmenu');
-  function setMenu(o){ mm.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); }
+  function setMenu(o){ mm.classList.toggle('open', o); mm.inert = !o; burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); }
   burger.addEventListener('click', function(){ setMenu(!mm.classList.contains('open')); });
   mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
   addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });

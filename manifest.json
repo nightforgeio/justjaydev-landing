@@ -9,14 +9,41 @@
   "theme_color": "#000000",
   "orientation": "portrait-primary",
   "lang": "en",
-  "categories": ["business", "productivity", "developer"],
+  "categories": [
+    "business",
+    "productivity",
+    "developer"
+  ],
   "icons": [
-    { "src": "assets/icon-32.png", "sizes": "32x32", "type": "image/png" },
-    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "assets/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "shortcuts": [
-    { "name": "Free website audit", "url": "./#contact", "description": "Tell me about your business" },
-    { "name": "See my work", "url": "./#work", "description": "Shipped projects" }
-  ]
+    {
+      "name": "Free website audit",
+      "url": "./#contact",
+      "description": "Tell me about your business"
+    },
+    {
+      "name": "See my work",
+      "url": "./#work",
+      "description": "Shipped projects"
+    }
+  ],
+  "id": "./"
 }

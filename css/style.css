@@ -281,7 +281,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;font-family:var(--fo
 .mbar{display:none}
 
 /* reveal */
-.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease),transition-delay .3s}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 /* stylelint-disable declaration-no-important -- the single sanctioned !important:
    a reduced-motion override must beat inline animation styles. */

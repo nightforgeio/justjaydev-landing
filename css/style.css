@@ -66,7 +66,7 @@ h2{font-size:clamp(2.1rem,5vw,3.6rem);margin:14px 0 18px}
 .mmenu{display:none}
 
 /* hero */
-.hero{padding:clamp(56px,8vw,104px) 0 clamp(56px,7vw,90px);overflow:hidden}
+.hero{position:relative;padding:clamp(56px,8vw,104px) 0 clamp(56px,7vw,90px);overflow:hidden}
 .hero::before{content:"";position:absolute;width:780px;height:780px;right:-260px;top:-300px;border-radius:50%;background:radial-gradient(circle,rgba(198,255,61,.14),transparent 62%);pointer-events:none}
 .hero-g{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;position:relative}
 .avail{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-m);font-size:.82rem;color:var(--fg-2);border:1px solid var(--line-2);padding:8px 14px;border-radius:999px;background:var(--bg-2)}

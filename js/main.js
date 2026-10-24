@@ -97,6 +97,7 @@
     nav.classList.toggle('scrolled', y > 8);
     prog.style.width = (h > 0 ? y / h * 100 : 0) + '%';
     mbar.classList.toggle('show', y > innerHeight * 0.6 && (document.getElementById('contact').getBoundingClientRect().top > innerHeight * 0.5));
+    var tt = document.getElementById('toTop'); if (tt) tt.classList.toggle('show', y > innerHeight * 0.8);
     var cur = '';
     secs.forEach(function(s){ if (s && s.getBoundingClientRect().top < innerHeight * 0.4) cur = s.id; });
     navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
@@ -111,7 +112,7 @@
   burger.addEventListener('click', function(){ setMenu(!mm.classList.contains('open')); });
   mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
   addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
-
+  var toTop = document.getElementById('toTop'); if (toTop) toTop.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
   // ===== live load time =====
   function showSpeed(){
     var v = document.getElementById('speedVal'), ms = 0;
